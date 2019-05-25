@@ -9,7 +9,7 @@ use Cake\ORM\TableRegistry;
 
 class LdapAuthenticate extends BaseAuthenticate {
   public function authenticate(Request $request, Response $response) {
-    if (!empty($request->data['username']) && !empty($request->data['password'])) {
+    if (!empty($request->getData('username')) && !empty($request->getData('password'))) {
       $username = $request->data['username'];
       $password = $request->data['password'];
 

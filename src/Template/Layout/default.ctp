@@ -22,7 +22,7 @@ HTML;
 $this->append('css', $html5Shim);
 
 // Generic body class generator
-$this->prepend('body_attrs', ' class="' . strtolower(implode(' ', [$this->request->controller, $this->request->action])) . '" ');
+$this->prepend('body_attrs', ' class="' . strtolower(implode(' ', [$this->request->getParam('controller'), $this->request->getParam('action')])) . '" ');
 
 ?>
 <!DOCTYPE html>

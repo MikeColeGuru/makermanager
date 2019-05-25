@@ -11,7 +11,7 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <?php
-        $auth_user = $this->request->session()->read('Auth.User');        
+        $auth_user = $this->request->getSession()->read('Auth.User');        
         $left_nav = [];
         $dropdown_nav = [];
         $admin_nav = [];
